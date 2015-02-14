@@ -1,0 +1,36 @@
+@media screen and (min-width: 480px)
+{
+  #primary
+  {
+    width: 50%;
+    float: left;
+  }
+  
+  #secondary
+  {
+    width: 40%;
+    float: right;
+  }
+  
+  #firstp
+  {
+    width: 50%;
+    float: left;
+  }
+  
+  #secondp
+  {
+    width: 40%;
+    float: right;
+  }
+  
+  #gallery li
+  {
+    width: 28.3333333333333333333333333%;
+  }
+}
+
+@media screen and (min-width: 660px)
+{
+ 
+}
