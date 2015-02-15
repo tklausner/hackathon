@@ -3,6 +3,7 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>Google Maps JavaScript API v3 Example: Map Simple</title>
+<<<<<<< HEAD
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -12,6 +13,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+=======
+>>>>>>> 11ff45e7097c11d466721f719ab40167f7cee183
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
 <script type="text/javascript">
   
@@ -220,6 +223,7 @@ body {
 </style>
 </head>
 <body style="margin:0px; padding:0px;" onload="initialize()">
+<<<<<<< HEAD
   <div id="content">
     <div class="jumbotron">
     This is the mapping service for the app
@@ -240,3 +244,19 @@ body {
 
 </body>
 </html>
+=======
+  <div id="locationField">
+    <input id="autocomplete" type="text" />
+  </div>
+  <div id="controls">
+    <form name="controls">
+    <input type="radio" name="type" value="establishment" onclick="search()" checked="checked"/>All<br/>
+    <input type="radio" name="type" value="restaurant" onclick="search()" />Restaurants<br/>
+    <input type="radio" name="type" value="lodging" onclick="search()" />Lodging
+    </form>
+  </div>
+  <div id="map_canvas"></div>
+  <div id="listing"><table id="results"></table></div>
+</body>
+</html>
+>>>>>>> 11ff45e7097c11d466721f719ab40167f7cee183
