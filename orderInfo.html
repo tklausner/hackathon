@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="styles.css">
+   <script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+    <link data-require="bootstrap@3.3.1" data-semver="3.3.1" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script data-require="bootstrap@3.3.1" data-semver="3.3.1" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ <script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+    <script src="script.js"></script>
+   
+  </head>
+
+  <body class="orderConfirmation">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12"<div class="col-xs-12">
+          <a  class="col-xs-3 col-xs-offset-5"  href="index.html">
+            <img src="Food2U.jpg" height="90px" width="160" alt="missing picture">
+          </a>
+        </div>
+         <div class="col-xs-4 col-xs-offset-4">
+          <div class="title">Finalize Orders</div>
+          <form method="post" action="/confirm">
+            <div class="form-group">
+              <label for="restaurantlbl">Restaurant:</label>
+              <input type="restaurant" class="form-control" id="restaurantlbl" placeholder="Information missing" readonly="true">
+            </div>
+            <div class="form-group">
+              <label for="orderlbl">Location:</label>
+              <input type="order" class="form-control" id="locationlbl" placeholder="Information Missing" readonly="true">
+            </div>
+            <div class="form-group">
+              <label for="costlbl">Cost of Order:</label>
+              <input type="number" class="form-control" id="costlbl" placeholder="Information Missing" step=.01>
+            </div>
+            <div class="form-group">
+              <label for="costlbl">Tip:</label>
+              <input type="number" class="form-control" id="tiplbl" placeholder="Enter a Tip" step=.01>
+            </div>
+            <div class="form-group">
+
+              
+
+            </div>
+            <div class="form-group">
+           
+          <a href = "orderInfo.html"><button  type="confirm" class="btn btn-primary" onclick="changeText()">Confirm</button> </a>   
+
+          <button type="Fix" class="btn btn-secondary">Fix Error</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+    var restrauntName = document.getElementById("restaurantlbl");
+    restrauntName.value = "McDonalds";
+    var restrauntAdress = document.getElementById("locationlbl");
+     restrauntAdress.value = '1 Golden Arch Drive, San Fransisco, CA, 92540';
+    var amount = document.getElementById("costlbl");
+      var tip = document.getElementById("tiplbl");
+     var total = (amount*.09) + tip;
+
+
+  </script>
+<script type="text/javascript">
+
+  Parse.initialize("OxK5lmQ7ZJX1RCvqh9yJBQMAfzZzD7A6p3RmowHC", "Fks4AXLPTeR3S47S3gNZ7aJtVksy3NIjqnm89QeQ");
+
+    
+    var TestObject = Parse.Object.extend("TestObject");
+    var testObject = new TestObject();
+      testObject.save({restraunt: restrauntName.value}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+    
+  </script>
+
+  </body>
+<style type="text/css"> body{background-color: #ed1c24 !important} 
+div.title { font-size: 20px; font-weight: bold; text-align: center;} </style>
+</html>
