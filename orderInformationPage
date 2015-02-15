@@ -7,13 +7,19 @@
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
     <script src="script.js"></script>
+   
   </head>
 
   <body class="orderConfirmation">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-          <div class="col-xs-4 col-xs-offset-4">
+        <div class="col-xs-12"<div class="col-xs-12">
+          <a  class="col-xs-3 col-xs-offset-5"  href="index.html">
+            <img src="Food2U.jpg" height="90px" width="160" alt="missing picture">
+          </a>
+        </div>
+         <div class="col-xs-4 col-xs-offset-4">
+          <div class="title">Finalize Orders</div>
           <form method="post" action="/confirm">
             <div class="form-group">
               <label for="restaurantlbl">Restaurant:</label>
@@ -44,5 +50,6 @@
       </div>
     </div>
   </body>
-<style type="text/css"> body{background-color: #ed1c24 !important} </style>
+<style type="text/css"> body{background-color: #ed1c24 !important} 
+div.title { font-size: 20px; font-weight: bold; text-align: center;} </style>
 </html>
